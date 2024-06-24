@@ -29,3 +29,24 @@
 ## install Html webpack plugin
 
 - npm i --save-dev html-webpack-plugin
+
+## Transpiling Modern JavaScript to ES5
+
+- npm run dev -- --devtool inline-source-map
+
+## To make code work in older browsers
+
+- npm install babel-loader @babel/core @babel/preset-env --save-dev
+- npm run dev -- --devtool inline-source-map
+
+## Working with Styles
+
+- npm install css-loader style-loader --save-dev
+
+## Speed Up the Development Process with webpack-dev-server
+
+- npm install webpack-dev-server --save-dev
+
+## install jQuery 3
+
+- npm install jquery@3.6.0
