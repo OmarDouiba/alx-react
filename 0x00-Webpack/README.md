@@ -20,6 +20,8 @@
 },
 ```
 
+- by default webpack create distination file as "./dist/file_name" as output point and use the "./src" as entry point.
+
 ## run the devlopment mode
 
 - npm run dev
