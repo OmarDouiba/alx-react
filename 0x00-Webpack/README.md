@@ -1,7 +1,13 @@
 # 0x00-Webpack
 
-- webpack tool that alows us to minimize and optimize files for production
+## JS Module Bundler
 
+Module bundlers are tools frontend developed used to bundle JS module intp a single js file that can be executed in the browser.
+
+- EX of modern module bundlers are: webpack, rollup, etc
+-
+## Bundle
+File that contain all the modules your a
 ## install webpack
 
 - npm init -y
