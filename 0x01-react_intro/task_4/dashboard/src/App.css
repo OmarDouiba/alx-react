@@ -1,0 +1,40 @@
+:root {
+  --color-primary: #e0354b;
+  --font-family: sans-serif;
+  --border-line: 3px solid var(--color-primary);
+}
+
+body {
+  font-family: var(--font-family);
+}
+
+.App-header {
+  display: flex;
+  align-items: center;
+  border-bottom: var(--border-line);
+}
+
+.App-header h1 {
+  color: var(--color-primary);
+}
+
+.App-logo {
+  width: 200px;
+  height: 199px;
+}
+
+.App-body {
+  min-height: 50vh;
+  margin: 3rem;
+}
+
+.App-footer {
+  display: flex;
+  justify-content: center;
+  border-top: var(--border-line);
+}
+
+.label-mg,
+.input-mg {
+  margin-right: 0.75rem;
+}

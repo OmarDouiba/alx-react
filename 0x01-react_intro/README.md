@@ -24,7 +24,7 @@ we will use reactDom render() to render the app class into the root div
 ReactDOM.render(<App />, document.getElementById("root"));
 ```
 
-## Create React App
+## 1- Create React App
 
 - npx create-react-app (app name)
 - Ex:
@@ -39,11 +39,11 @@ when we run this commend it will generate the initial project structer and insta
 - Builds the app for production to the build folder.
   - npm run build
 
-## [React Developer Tools](https://chromewebstore.google.com/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
+## 2- [React Developer Tools](https://chromewebstore.google.com/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
 
 Extension that allows you to inspect components as they written.
 
-## JSX: JavaScript + XML
+## 3- JSX: JavaScript + XML
 
 JSX is a powerful syntax extension for JavaScript that allows you to write HTML-like code in your React applications. While it is not required, it simplifies the process of creating React elements and makes your code more readable.
 
@@ -66,11 +66,11 @@ const heading = React.createElement(
 );
 ```
 
-## Components
+## 4- Components
 
 Components are the building blocks of a React application. They allow you to split the UI into independent, reusable pieces that can be managed separately.
 
-#### Types of Components
+#### 1- Types of Components
 
 - Functional Components:
   - These are simple JavaScript functions that take props as an argument and return React elements.
@@ -106,6 +106,49 @@ function App() {
 }
 ```
 
-## Props
+## 5- Props
 
-## State
+## 6- State
+
+## 7- jest-dom
+
+- install jest
+  - npm install --save-dev @testing-library/jest-dom
+
+## 8- [A Practical Guide To Testing React Applications With Jest](https://www.smashingmagazine.com/2020/06/practical-guide-testing-react-applications-jest/)
+
+- [youtube](https://www.youtube.com/watch?v=KsiuE0IS9AE&list=PLGDf0elkI13EfDa45q-q1YpAIMBl5mjab&index=2)
+
+## 9- [Deploy React App to GitHub Pages](https://www.youtube.com/watch?v=7wzuievFjrk)
+
+#### 1- Set Up homepage in package.json
+
+```js
+"homepage": "https://your-username.github.io/task_3/"
+```
+
+#### 2- Install gh-pages Package
+
+- npm install gh-pages --save-dev
+
+#### 3- Update scripts in package.json
+
+- Modify your scripts section in package.json to include deployment scripts:
+
+```js
+"scripts": {
+  "start": "react-scripts start",
+  "build": "react-scripts build",
+  "test": "react-scripts test",
+  "deploy": "gh-pages -d build",
+  "predeploy": "npm run build"
+}
+```
+
+#### 4- Deploy to GitHub Pages
+
+- npm run deploy
+
+#### 5- Verify Deployment
+
+Once the deployment is successful, visit your GitHub repository’s settings. Scroll down to the GitHub Pages section. You should see a message indicating the URL where your site is published, typically https://your-username.github.io/task_3/.

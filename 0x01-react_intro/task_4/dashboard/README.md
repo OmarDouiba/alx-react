@@ -69,3 +69,46 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
+## jest-dom
+
+- install jest
+  - npm install --save-dev @testing-library/jest-dom
+
+## [A Practical Guide To Testing React Applications With Jest](https://www.smashingmagazine.com/2020/06/practical-guide-testing-react-applications-jest/)
+
+- [youtube](https://www.youtube.com/watch?v=KsiuE0IS9AE&list=PLGDf0elkI13EfDa45q-q1YpAIMBl5mjab&index=2)
+
+## [Deploy React App to GitHub Pages](https://www.youtube.com/watch?v=7wzuievFjrk)
+
+#### Set Up homepage in package.json
+
+```js
+"homepage": "https://your-username.github.io/task_3/"
+```
+
+#### Install gh-pages Package
+
+- npm install gh-pages --save-dev
+
+#### Update scripts in package.json
+
+- Modify your scripts section in package.json to include deployment scripts:
+
+```js
+"scripts": {
+  "start": "react-scripts start",
+  "build": "react-scripts build",
+  "test": "react-scripts test",
+  "deploy": "gh-pages -d build",
+  "predeploy": "npm run build"
+}
+```
+
+#### Deploy to GitHub Pages
+
+- npm run deploy
+
+#### Verify Deployment
+
+Once the deployment is successful, visit your GitHub repository’s settings. Scroll down to the GitHub Pages section. You should see a message indicating the URL where your site is published, typically https://your-username.github.io/task_3/.
+
