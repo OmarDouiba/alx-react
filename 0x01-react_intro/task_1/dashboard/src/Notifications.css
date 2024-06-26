@@ -1,0 +1,8 @@
+.Notifications {
+  border: 3px dashed #e0354b;
+  padding: 1rem 2rem;
+}
+
+.Notifications > p {
+  font-weight: 700;
+}
