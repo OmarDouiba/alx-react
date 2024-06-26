@@ -1,0 +1,17 @@
+.Notifications {
+  border: 3px dashed #e0354b;
+  padding: 1rem 2rem;
+}
+
+.Notifications > p {
+  font-weight: 700;
+}
+
+.item-list {
+  color: #1d0563;
+  font-weight: 500;
+}
+
+.item-list:not(:first-child) {
+  color: #ff0200;
+}
