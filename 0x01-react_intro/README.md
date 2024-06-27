@@ -152,3 +152,5 @@ function App() {
 #### 5- Verify Deployment
 
 Once the deployment is successful, visit your GitHub repository’s settings. Scroll down to the GitHub Pages section. You should see a message indicating the URL where your site is published, typically https://your-username.github.io/task_3/.
+
+## [Deplyment task 4](https://omardouiba.github.io/alx-react/)
