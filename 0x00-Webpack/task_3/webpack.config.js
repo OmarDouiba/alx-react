@@ -1,12 +1,29 @@
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const path = require("path");
 
 module.exports = {
-  entry: "./js/dashboard_main.js",
-  output: {
-    filename: "bundle.js",
-    path: path.resolve(__dirname, "public"),
+  entry: {
+    header: {
+      import: path.resolve(__dirname, "./modules/header/header.js"),
+      dependOn: "shared",
+    },
+    body: {
+      import: path.resolve(__dirname, "./modules/body/body.js"),
+      dependOn: "shared",
+    },
+    footer: {
+      import: path.resolve(__dirname, "./modules/footer/footer.js"),
+      dependOn: "shared",
+    },
+    shared: "jquery",
   },
-  mode: "production",
+  output: {
+    filename: "[name].bundle.js",
+    path: path.resolve(__dirname, "public"),
+    // clean: true, // This is an alternative to CleanWebpackPlugin for Webpack 5+
+  },
+  mode: "development",
   module: {
     rules: [
       {
@@ -27,5 +44,25 @@ module.exports = {
         ],
       },
     ],
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      filename: "./index.html",
+    }),
+    new CleanWebpackPlugin(),
+  ],
+  devtool: "inline-source-map",
+  optimization: {
+    splitChunks: {
+      chunks: "all",
+    },
+  },
+  performance: {
+    maxAssetSize: 500 * 1024,
+  },
+  devServer: {
+    static: path.resolve(__dirname, "./public"),
+    compress: true,
+    port: 8564,
   },
 };
