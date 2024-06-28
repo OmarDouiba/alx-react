@@ -58,10 +58,10 @@ module.exports = {
     },
   },
   performance: {
-    maxAssetSize: 500 * 1024,
+    maxAssetSize: 1000000,
   },
   devServer: {
-    static: path.resolve(__dirname, "./public"),
+    static: path.join(__dirname, "./public"),
     compress: true,
     port: 8564,
   },

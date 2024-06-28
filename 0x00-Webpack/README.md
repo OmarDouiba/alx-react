@@ -6,8 +6,11 @@ Module bundlers are tools frontend developed used to bundle JS module intp a sin
 
 - EX of modern module bundlers are: webpack, rollup, etc
 -
+
 ## Bundle
+
 File that contain all the modules your a
+
 ## install webpack
 
 - npm init -y
@@ -56,3 +59,12 @@ File that contain all the modules your a
 ## install jQuery 3
 
 - npm install jquery@3.6.0
+
+## start server and open browser
+
+- npm install webpack webpack-cli webpack-dev-server open --save-dev
+
+- then add to scripts in package.js
+  ```js 
+  "start-dev": "webpack-dev-server --open"
+  ```
