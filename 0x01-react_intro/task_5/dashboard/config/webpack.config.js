@@ -5,8 +5,8 @@ module.exports = {
   entry: "./src/index.js",
   output: {
     filename: "bundle.js",
-    path: path.resolve(__dirname, "dist"),
-    clean: true,
+    path: path.resolve("./dist"),
+    // clean: true,
   },
   mode: "development",
   module: {
@@ -39,9 +39,9 @@ module.exports = {
     extensions: [".js", ".jsx"],
   },
   devServer: {
-    static: {
-      directory: path.join(__dirname, "dist"),
-    },
+    static: path.resolve("./dist"),
+    compress: true,
+
     open: true,
     port: 8546,
     hot: true,
