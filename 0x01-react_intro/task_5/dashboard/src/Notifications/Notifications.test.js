@@ -1,23 +1,21 @@
-import React from 'react';
-import Enzyme, { shallow } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
-import Notifications from './Notifications';
+import { shallow } from "enzyme";
+import Notifications from "./Notifications";
 
-Enzyme.configure({ adapter: new Adapter() });
+describe("Notifications components", () => {
+  let wrapper;
 
-describe('Notifications component', () => {
-    it('should render withou crashing', () => {
-        const wrapper = shallow(<Notifications />);
-        expect(wrapper.existts()).toBe(true);
-    });
-
-    it('should render three list items', () => {
-        const wrapper = shallow(<Notifications />);
-        expect(wrapper.find('li').length).toBe(3);
-    });
-
-    it('should render the text "Here is the list of notifications"', () => {
-        const wrapper = shallow(<Notifications />);
-        expect(wrapper.text()).toContain("Here is the list of notifications");
-    });
+  beforeEach(() => {
+    wrapper = shallow(<Notifications />);
+  });
+  it("renders Notifications without crashing", () => {
+    expect(wrapper.exists()).toBe(true);
+  });
+  it("renders 3 list items", () => {
+    expect(wrapper.find("li").length).toEqual(3);
+  });
+  it("render text", () => {
+    expect(wrapper.find("p").text()).toEqual(
+      "Here is the list of notifications"
+    );
+  });
 });

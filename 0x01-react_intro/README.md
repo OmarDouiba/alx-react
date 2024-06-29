@@ -106,7 +106,7 @@ function App() {
 }
 ```
 
-## 5- Props
+## [5- Props](../0x02-react_props/)
 
 ## 6- State
 
@@ -154,3 +154,30 @@ function App() {
 Once the deployment is successful, visit your GitHub repository’s settings. Scroll down to the GitHub Pages section. You should see a message indicating the URL where your site is published, typically https://your-username.github.io/task_3/.
 
 ## [Deplyment task 4](https://omardouiba.github.io/alx-react/)
+
+# task_5
+
+## Install and configure the various plugins to support:
+
+- Initialize a New npm Project
+
+```js
+npm init -y
+```
+
+- inline source map
+- style loader
+- css loader
+- image webpack loader
+
+```js
+npm install webpack webpack-cli webpack-dev-server html-webpack-plugin clean-webpack-plugin style-loader css-loader image-webpack-loader file-loader --save-dev
+```
+
+## install babel
+
+- Install Babel and the necessary presets:
+
+```js
+npm install @babel/core @babel/preset-env @babel/preset-react babel-loader --save-dev
+```

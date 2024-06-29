@@ -1,28 +1,47 @@
-import logo from './logo.jpg';
-import './App.css';
-import { getFullYear } from '../utils/utils';
-import { getFooterCopy } from '../utils/utils';
-
+import "./App.css";
+import logo from "../logo.jpg";
+import { getFooterCopy, getFullYear } from "../utils/utils";
 
 function App() {
   return (
-    <>
-      <header className='App-header'>
-        <img src={logo} alt="Logo" />
+    <div>
+      <div className="App-header">
+        <img src={logo} className="App-logo" alt="Holberton Logo" />
         <h1>School dashboard</h1>
-      </header>
-      <body className='App-body'>
+      </div>
+      <div className="App-body">
         <p>Login to access the full dashboard</p>
-        <label htmlFor='email'>Email:</label>
-        <input id='email' type='text' />
-        <label htmlFor='password'>Password:</label>
-        <input id='password' type='text'/>
-        <button>OK</button>
-      </body>
-      <footer className='App-footer'>
-        <p>Copyright {getFullYear()} - {getFooterCopy()}</p>
-      </footer>
-    </>
+        <form className="form">
+          <label htmlFor="email" className="label-mg">
+            email:
+          </label>
+          <input
+            type="email"
+            id="email"
+            placeholder="Email"
+            className="input-mg"
+            required
+          />
+
+          <label htmlFor="password" className="label-mg">
+            password:
+          </label>
+          <input
+            type="password"
+            id="password"
+            placeholder="Password"
+            className="input-mg"
+            required
+          />
+          <button>OK</button>
+        </form>
+      </div>
+      <div className="App-footer">
+        <p>
+          Copyright {getFullYear()} - {getFooterCopy(true)}
+        </p>
+      </div>
+    </div>
   );
 }
 
