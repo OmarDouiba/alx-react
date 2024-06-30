@@ -1,3 +1,4 @@
+import React from "react";
 import "./App.css";
 import Notifications from "../Notifications/Notifications";
 import Login from "../Login/Login";
