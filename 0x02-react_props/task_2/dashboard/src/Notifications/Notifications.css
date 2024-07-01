@@ -1,0 +1,27 @@
+:root {
+  --color-primary: #e0354b;
+  --font-family: sans-serif;
+  --border-line: 3px solid var(--color-primary);
+}
+
+body {
+  font-family: var(--font-family);
+}
+
+.Notifications {
+  border: 3px dashed #e0354b;
+  padding: 1rem 2rem;
+}
+
+.Notifications > p {
+  font-weight: 700;
+}
+
+.item-list {
+  color: #1d0563;
+  font-weight: 500;
+}
+
+.item-list:not(:first-child) {
+  color: #ff0200;
+}

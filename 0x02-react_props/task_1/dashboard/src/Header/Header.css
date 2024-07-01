@@ -1,0 +1,14 @@
+.App-logo {
+  width: 200px;
+  height: 199px;
+}
+
+.App-header {
+  display: flex;
+  align-items: center;
+  border-bottom: var(--border-line);
+}
+
+.App-header h1 {
+  color: var(--color-primary);
+}
