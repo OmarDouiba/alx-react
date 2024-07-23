@@ -1,0 +1,42 @@
+body {
+  font-family: sans-serif;
+}
+/* Header */
+.App-header {
+  display: flex;
+  align-items: center;
+  border-bottom: 0.25rem solid #e0354b;
+}
+
+.App-header img {
+  width: 250px;
+}
+
+.App-header h1 {
+  color: #e0354b;
+  font-size: 2.7rem;
+  font-weight: 700;
+}
+
+/* Body */
+.App-body {
+  margin-top: 4rem;
+  margin-left: 3rem;
+  height: 42vh;
+}
+
+.App-body p {
+  font-size: 1.2rem;
+}
+
+/* Footer */
+
+.App-footer {
+  border-top: 0.25rem solid #e0354b;
+  text-align: center;
+}
+
+.App-footer p {
+  font-size: 1.2rem;
+  font-style: italic;
+}
