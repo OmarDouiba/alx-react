@@ -125,9 +125,11 @@ function App() {
 
 ```js
 "homepage": "https://your-username.github.io/task_3/"
+
+--> "homepage": "https://OmarDouiba.github.io/alx-react/"
 ```
 
-#### 2- Install gh-pages Package
+#### 2- Install gh-pages Package-
 
 - npm install gh-pages --save-dev
 
