@@ -1,0 +1,16 @@
+
+/* Form */
+.form-group {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.form-email {
+  display: flex;
+  gap: 1rem;
+}
+.form-password {
+  display: flex;
+  gap: 1rem;
+}
