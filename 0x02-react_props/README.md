@@ -187,7 +187,7 @@ Sometimes, we want to be able to set a default value for a prop. For instance, o
 In cases like this, we can set a default value for our title which will automatically be rendered if the title has not been passed as a prop from our parent component.
 
 ```js
-NotificationItem.defaultProp = {
+NotificationItem.defaultProps = {
   type: "default",
   html: "",
   value: "",
