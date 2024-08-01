@@ -1,0 +1,24 @@
+/* Body */
+.App-body {
+  margin-top: 4rem;
+  margin-left: 3rem;
+  height: 42vh;
+}
+
+.App-body p {
+  font-size: 1.2rem;
+}
+
+/* Header */
+.App-header {
+  display: flex;
+  align-items: center;
+  border-bottom: 0.25rem solid #e0354b;
+}
+
+/* Footer */
+
+.App-footer {
+  border-top: 0.25rem solid #e0354b;
+  text-align: center;
+}
