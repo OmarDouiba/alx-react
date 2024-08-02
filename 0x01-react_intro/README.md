@@ -183,3 +183,5 @@ npm install webpack webpack-cli webpack-dev-server html-webpack-plugin clean-web
 ```js
 npm install @babel/core @babel/preset-env @babel/preset-react babel-loader --save-dev
 ```
+
+## [task5 resource](https://medium.com/@rahuljaim/unveiling-the-power-of-code-splitting-with-webpack-for-react-and-redux-applications-cc5a7cadf7d0)
