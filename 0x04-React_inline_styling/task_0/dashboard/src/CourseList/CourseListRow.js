@@ -5,25 +5,25 @@ function CourseListRow({ isHeader, textFirstCell, textSecondCell }) {
   const backgroundRows = { background: "#f5f5f5ab" };
   const backgroundHeader = { background: "#deb5b545" };
   return (
-    <tr style={backgroundRows}>
+    <>
       {isHeader ? (
         textSecondCell === null ? (
-          <th colSpan={2} style={backgroundHeader}>
-            {textFirstCell}
-          </th>
+          <tr style={backgroundHeader}>
+            <th colSpan={2}>{textFirstCell}</th>
+          </tr>
         ) : (
-          <>
+          <tr style={backgroundHeader}>
             <th>{textFirstCell}</th>
             <th>{textSecondCell}</th>
-          </>
+          </tr>
         )
       ) : (
-        <>
+        <tr style={backgroundRows}>
           <td>{textFirstCell}</td>
           <td>{textSecondCell}</td>
-        </>
+        </tr>
       )}
-    </tr>
+    </>
   );
 }
 
