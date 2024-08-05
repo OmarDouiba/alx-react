@@ -49,7 +49,7 @@ function Notifications({ displayDrawer, listNotifications }) {
   );
 }
 
-Notifications.prototype = {
+Notifications.propTypes = {
   displayDrawer: PropTypes.bool,
   listNotifications: PropTypes.arrayOf(NotificationItemShape),
 };

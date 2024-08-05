@@ -18,7 +18,6 @@ class Notifications extends PureComponent {
   shouldComponentUpdate(nextProps) {
     return nextProps.listNotifications.length > this.listNotifications.length;
   }
-
   render() {
     const { displayDrawer, listNotifications } = this.props;
 

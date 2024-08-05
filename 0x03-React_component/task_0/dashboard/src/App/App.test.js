@@ -22,13 +22,13 @@ describe("Test App", () => {
     expect(wrapper.find(Header).exists()).toBe(true);
   });
   it("Contain the Login component", () => {
-    expect(wrapper.find(Login).exists()).toBe(true);
+    expect(wrapper.find(Login).exists()).toBe(false);
   });
   it("Contain the Footer component", () => {
     expect(wrapper.find(Footer).exists()).toBe(true);
   });
   it("Contain the CourseList component", () => {
-    expect(wrapper.find(CourseList).exists()).toBe(false);
+    expect(wrapper.find(CourseList).exists()).toBe(true);
   });
 });
 

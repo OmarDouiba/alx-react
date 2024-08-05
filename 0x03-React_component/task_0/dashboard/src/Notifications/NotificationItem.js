@@ -13,7 +13,7 @@ function NotificationItem({ type, value, html }) {
   );
 }
 
-NotificationItem.prototype = {
+NotificationItem.propTypes = {
   type: PropTypes.string.isRequired,
   value: PropTypes.string.isRequired,
   html: PropTypes.shape({

@@ -8,7 +8,7 @@ import CourseList from "../CourseList/CourseList";
 import { getLatestNotification } from "../utils/utils";
 import PropTypes from "prop-types";
 
-class App extends React.Component {
+class App extends Component {
   render() {
     const isLoggedIn = this.props;
     const listCourses = [
@@ -43,11 +43,7 @@ class App extends React.Component {
             <Header />
           </div>
           <div className="App-body">
-            {isLoggedIn ? (
-              <CourseList listCourses={listCourses} />
-            ) : (
-              <Login />
-            )}
+            {isLoggedIn ? <CourseList listCourses={listCourses} /> : <Login />}
           </div>
           <div className="App-footer">
             <Footer />
@@ -58,7 +54,7 @@ class App extends React.Component {
   }
 }
 
-App.prototype = {
+App.propTypes = {
   isLoggedIn: PropTypes.bool.isRequired,
 };
 

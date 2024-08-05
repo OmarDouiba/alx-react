@@ -13,17 +13,16 @@ class App extends Component {
     super(props);
   }
   componentDidMount() {
-    window.addEventListener("keydown", this.handleKeyDown);
+    document.addEventListener("keydown", this.handleKeyDown);
   }
 
   componentWillUnmount() {
-    window.removeEventListener("keydown", this.handleKeyDown);
+    document.removeEventListener("keydown", this.handleKeyDown);
   }
 
   handleKeyDown = (event) => {
     if (event.key === "h" && event.ctrlKey) {
       alert("Logging you out");
-      console.log(this.props);
       this.props.logOut();
     }
   };
