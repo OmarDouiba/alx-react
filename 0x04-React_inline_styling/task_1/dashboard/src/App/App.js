@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "../App/App.css";
 import Login from "../Login/Login";
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
@@ -9,6 +8,7 @@ import { getLatestNotification } from "../utils/utils";
 import BodySectionWithMarginBottom from "../BodySection/BodySectionWithMarginBottom";
 import BodySection from "../BodySection/BodySection";
 import PropTypes from "prop-types";
+import { StyleSheet, css } from "aphrodite";
 
 class App extends Component {
   constructor(props) {
@@ -58,10 +58,10 @@ class App extends Component {
       <>
         <Notifications listNotifications={listNotifications} />
         <div className="App">
-          <div className="App-header">
+          <div className={css(styles.appHeader)}>
             <Header />
           </div>
-          <div className="App-body">
+          <div className={css(styles.appBody)}>
             {isLoggedIn ? (
               <BodySectionWithMarginBottom title={"Course list"}>
                 <CourseList listCourses={listCourses} />
@@ -79,7 +79,7 @@ class App extends Component {
             </BodySection>
           </div>
 
-          <div className="App-footer">
+          <div className={css(styles.appFooter)}>
             <Footer />
           </div>
         </div>
@@ -87,6 +87,28 @@ class App extends Component {
     );
   }
 }
+
+const styles = StyleSheet.create({
+  /* Body */
+  appBody: {
+    marginTop: "4rem",
+    marginLeft: "3rem",
+  },
+
+  /* Header */
+  appHeader: {
+    display: "flex",
+    alignItems: "center",
+    borderBottom: "0.25rem solid #e0354b",
+  },
+
+  /* Footer */
+
+  appFooter: {
+    borderTop: "0.25rem solid #e0354b",
+    textAlign: "center",
+  },
+});
 
 App.propTypes = {
   isLoggedIn: PropTypes.bool.isRequired,

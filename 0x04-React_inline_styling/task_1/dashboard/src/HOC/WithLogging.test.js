@@ -3,6 +3,7 @@ import { mount } from "enzyme";
 import WithLogging from "./WithLogging";
 import Login from "../Login/Login";
 
+
 describe("WithLogging", () => {
   it("console.log called on mount", () => {
     console.log = jest.fn();

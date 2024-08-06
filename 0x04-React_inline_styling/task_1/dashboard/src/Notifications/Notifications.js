@@ -1,9 +1,32 @@
 import React, { Component } from "react";
-import "../Notifications/Notifications.css";
 import Icon from "../assets/close-icon.png";
 import NotificationItem from "./NotificationItem";
 import NotificationItemShape from "./NotificationItemShape";
 import PropTypes from "prop-types";
+import { StyleSheet, css } from "aphrodite";
+
+const styles = StyleSheet.create({
+  notifications: {
+    border: '0.1rem dashed #e0354b',
+    padding: '1rem 1rem',
+    fontWeight: '600',
+    width: '25rem',
+    position: 'absolute',
+    right: '0.5em',
+  },
+  
+  li[data-notification-type="default"]: {
+    color: '#2b166d',
+  },
+  
+  li[data-notification-type="urgent"]: {
+    color: '#ff0200',
+  },
+  
+  menuItem: {
+    textAlign: 'right',
+  }
+});
 
 class Notifications extends Component {
   constructor(props) {

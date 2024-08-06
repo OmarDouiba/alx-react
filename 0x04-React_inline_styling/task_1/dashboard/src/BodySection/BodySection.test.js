@@ -2,6 +2,7 @@ import React from "react";
 import { shallow } from "enzyme";
 import BodySection from "./BodySection";
 
+
 describe("<BodySection />", () => {
   it("should render correctly with children and an h2 element", () => {
     const wrapper = shallow(
