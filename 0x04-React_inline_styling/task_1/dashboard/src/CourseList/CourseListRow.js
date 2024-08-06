@@ -16,6 +16,7 @@ const styles = StyleSheet.create({
 
   thColspan: {
     borderBottom: "0.15rem solid #ddd",
+    padding: " 8px",
     textAlign: "center",
   },
 });
