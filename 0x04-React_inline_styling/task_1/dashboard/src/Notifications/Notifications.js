@@ -4,28 +4,21 @@ import NotificationItem from "./NotificationItem";
 import NotificationItemShape from "./NotificationItemShape";
 import PropTypes from "prop-types";
 import { StyleSheet, css } from "aphrodite";
+import "./Notifications.css";
 
 const styles = StyleSheet.create({
   notifications: {
-    border: '0.1rem dashed #e0354b',
-    padding: '1rem 1rem',
-    fontWeight: '600',
-    width: '25rem',
-    position: 'absolute',
-    right: '0.5em',
+    border: "0.1rem dashed #e0354b",
+    padding: "1rem 1rem",
+    fontWeight: "600",
+    width: "25rem",
+    position: "absolute",
+    right: "0.5em",
   },
-  
-  li[data-notification-type="default"]: {
-    color: '#2b166d',
-  },
-  
-  li[data-notification-type="urgent"]: {
-    color: '#ff0200',
-  },
-  
+
   menuItem: {
-    textAlign: 'right',
-  }
+    textAlign: "right",
+  },
 });
 
 class Notifications extends Component {
@@ -47,9 +40,9 @@ class Notifications extends Component {
 
     return (
       <>
-        <div className="menuItem">Your notifications</div>
+        <div className={css(styles.menuItem)}>Your notifications</div>
         {displayDrawer && (
-          <div className="Notifications">
+          <div className={css(styles.notifications)}>
             <button
               style={{
                 display: "inline",
