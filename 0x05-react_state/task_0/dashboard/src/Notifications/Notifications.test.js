@@ -98,3 +98,32 @@ describe("Test App", () => {
     expect(shouldComponentUpdate).toHaveLastReturnedWith(true);
   });
 });
+
+describe("Notifications component React State", () => {
+  let wrapper;
+  let handleDisplayDrawer;
+  let handleHideDrawer;
+
+  beforeEach(() => {
+    handleDisplayDrawer = jest.fn();
+    handleHideDrawer = jest.fn();
+    wrapper = shallow(
+      <Notifications
+        handleDisplayDrawer={handleDisplayDrawer}
+        handleHideDrawer={handleHideDrawer}
+      />
+    );
+  });
+
+  it("should call handleDisplayDrawer when the menu item is clicked", () => {
+    wrapper.find("#menuItem").simulate("click");
+    expect(handleDisplayDrawer).toHaveBeenCalled();
+  });
+  it("should call handleHideDrawer when the close button is clicked", () => {
+    wrapper.find("#closeNotifications").simulate("click");
+    expect(handleDisplayDrawer).not.toHaveBeenCalled();
+    expect(handleHideDrawer).toHaveBeenCalled();
+
+    jest.restoreAllMocks();
+  });
+});

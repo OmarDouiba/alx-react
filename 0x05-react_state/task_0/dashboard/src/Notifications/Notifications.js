@@ -122,7 +122,11 @@ class Notifications extends Component {
 
     return (
       <>
-        <div className={css(displayMenu)} onClick={handleDisplayDrawer}>
+        <div
+          id={"menuItem"}
+          className={css(displayMenu)}
+          onClick={handleDisplayDrawer}
+        >
           Your notifications
         </div>
         {displayDrawer && (
@@ -136,6 +140,7 @@ class Notifications extends Component {
                 background: "transparent",
                 border: "none",
               }}
+              id="closeNotifications"
               aria-label="Close"
               className={css(styles.notificationsButton)}
               onClick={() => {

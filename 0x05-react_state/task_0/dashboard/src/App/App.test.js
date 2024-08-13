@@ -57,3 +57,25 @@ describe("App component login part", () => {
     wrapper.unmount();
   });
 });
+
+describe("App component React state", () => {
+  let wrapper;
+
+  beforeEach(() => {
+    wrapper = shallow(<App />);
+  });
+  it("should have a default state for displayDrawer as false", () => {
+    expect(wrapper.state("displayDrawer")).toBe(false);
+  });
+  it("should set displayDrawer to true when handleDisplayDrawer is called", () => {
+    wrapper.instance().handleDisplayDrawer();
+    expect(wrapper.state("displayDrawer")).toBe(true);
+  });
+  it("should set displayDrawer to false when handleHideDrawer is called", () => {
+    wrapper.setState({
+      displayDrawer: true,
+    });
+    wrapper.instance().handleHideDrawer();
+    expect(wrapper.state("displayDrawer")).toBe(false);
+  });
+});

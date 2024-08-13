@@ -16,7 +16,7 @@ class App extends Component {
     this.handleDisplayDrawer = this.handleDisplayDrawer.bind(this);
     this.handleHideDrawer = this.handleHideDrawer.bind(this);
     this.state = {
-      displayDrawer: true,
+      displayDrawer: false,
     };
   }
 
