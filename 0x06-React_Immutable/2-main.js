@@ -7,7 +7,7 @@ const accImutable = accessImmutableObject(
       last: "Salva",
     },
   },
-  ["name", ""]
+  ["name", "first"]
 );
 
 console.log(accImutable);
