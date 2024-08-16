@@ -1,3 +1,5 @@
+import { Map } from './node_modules/immutable/dist/immutable';
+
 export const map = Map({
   1: 'Liam',
   2: 'Noah',
