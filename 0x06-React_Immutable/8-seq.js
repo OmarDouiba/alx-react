@@ -2,7 +2,7 @@ import { Seq } from './node_modules/immutable/dist/immutable';
 
 export default function printBestStudents(students) {
   const studentsFiltre = Seq(students).filtre((student) => {
-    student.score < 70;
+    student.score > 70;
   });
 
   const formattedStudents = studentsFiltre.map((student) => ({
