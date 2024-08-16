@@ -1,4 +1,4 @@
-import { Map } from "./node_modules/immutable/dist/immutable";
+import { Map } from './node_modules/immutable/dist/immutable';
 
 export default function accessImmutableObject(object, array) {
   if (array[0] in object) {
